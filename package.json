@@ -1,0 +1,27 @@
+{
+  "name": "pinocchio2",
+  "version": "0.0.2",
+  "description": "fake http server for testing your http server and client",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape tests/test-*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MangroveTech/pinocchio.git"
+  },
+  "keywords": [
+    "test",
+    "fake",
+    "http"
+  ],
+  "author": "Yorkie Neil <yorkiefixer@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MangroveTech/pinocchio/issues"
+  },
+  "homepage": "https://github.com/MangroveTech/pinocchio",
+  "dependencies": {
+    "express": "~4.1.0"
+  }
+}
