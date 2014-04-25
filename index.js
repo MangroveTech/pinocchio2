@@ -20,13 +20,14 @@ function Pinocchio(list) {
   }
 
   function fakeResponse(req, res, next) {
-    res.end(self.status, self.body);
+    res.status(self.status);
+    res.end(self.body);
   }
 }
 
 Pinocchio.prototype.setResponse = function(statusCode) {
   this.body = 'Just for debug';
-  this.statusCode = statusCode;
+  this.status = statusCode;
 }
 
 Pinocchio.prototype.listen = function(port, callback) {
