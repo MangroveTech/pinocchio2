@@ -1,6 +1,6 @@
 {
   "name": "pinocchio2",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "fake http server for testing your http server and client",
   "main": "index.js",
   "scripts": {
