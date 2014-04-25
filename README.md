@@ -11,7 +11,7 @@ $ npm install pinocchio2 --save
 ### Usage
 ```js
 var request = require('request')
-var Pinocchio = require('pinocchio');
+var Pinocchio = require('pinocchio2');
 var fake = new Pinocchio([
   // your test cases
   { method: 'POST', path: '/hello' },
