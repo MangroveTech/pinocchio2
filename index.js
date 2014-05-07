@@ -15,14 +15,16 @@ function Pinocchio(list) {
     this.app.get('/', fakeResponse);
   } else {
     list.forEach(function(tc) {
-      self.app[tc.method.toLowerCase()](tc.path.toLowerCase(), fakeResponse);
+      self.app[tc.method.toLowerCase()](tc.path.toLowerCase(), fakeResponse(tc));
     });
   }
 
-  function fakeResponse(req, res, next) {
-    res.status(self.status);
-    res.end(self.body);
-  }
+  function fakeResponse(context) {
+    return function(req, res, next) {
+      res.status(tc.status || self.status || 200);
+      res.end(tc.body || self.body);
+    };
+  };
 }
 
 Pinocchio.prototype.setResponse = function(statusCode) {
